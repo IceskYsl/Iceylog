@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   
   def category
     @category = Category.find(params[:id])
-    @posts = @category.posts.last_actived.paginate(:page => params[:page],:per_page => 50)
+    @posts = @category.posts.last_actived.paginate(:page => params[:page],:per_page => 10)
     render :action => "index" #, :stream => true
   end
   

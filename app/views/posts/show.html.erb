@@ -1,10 +1,18 @@
 <div class="SL">
-<div class="post">
- <div class="p-head">
-	<h1> <%=@post.title %></h1>
- </div>
-<div class="p-con">
-	<%= raw @post.body_html %>
-</div>
-</div>
-</div>
+	
+		<div class="post" style="margin-bottom: 40px;">
+			<div class="p-head">
+				<h2><%=link_to @post.title,post_path(@post)%>  </h2>
+				<p class="p-cat">By: <%= raw SiteConfig.site_author %> , In: <%=@post.category.name%> , Tag: <%=@post.tags.join(",")%> </p>
+				<small class="p-time">
+					<strong class="day"><%=@post.created_at.day%></strong>
+					<strong class="month"><%=@post.created_at.strftime("%b")%></strong>
+					<strong class="year"><%=@post.created_at.year%></strong>
+				</small>
+			</div>
+			<div class="p-con">		
+				<%=raw @post.body_html%>				
+     </div>
+	 </div>
+	
+ </div> 

@@ -2,10 +2,12 @@
 		
 		<!--Start Post-->
 		<%@posts.each  do |post|%>
-		<div class="post" style="margin-bottom: 40px;">
+		<div class="post" style="margin-bottom: 20px;">
 			<div class="p-head">
-				<h2><%=link_to post.title,post_path(post)%>  </h2>
-				<p class="p-cat">In: <%= link_to(post.category.name, category_posts_path(post.category), :title => post.category.name )%>  Tags:<%=post.tags%> </p>
+				<h2><%= link_to(truncate(post.title, :length => 30), post_path(post), :title => post.title) %> </h2>
+				<p class="p-cat">
+					In: <%= link_to(post.category.name, category_posts_path(post.category), :title => post.category.name )%>  Tags:<%=post.tags%> 
+				</p>
 				<small class="p-time">
 					<strong class="day"><%=post.created_at.day%></strong>
 					<strong class="month"><%=post.created_at.strftime("%b")%></strong>
@@ -13,7 +15,7 @@
 				</small>
 			</div>
 			<div class="p-con">		
-				<%=raw post.body_html%>				
+				<%=raw(truncate post.body_html, :length => 1040)%>				
       </div>
 	 </div>
 	 <%end%>
