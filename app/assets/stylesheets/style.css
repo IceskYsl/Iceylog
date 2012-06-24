@@ -55,7 +55,6 @@ h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
   margin-bottom: 0;
 }
 .footer  {
-	border-top: 1px solid #ccc;
 	clear:both;
   padding: 5px;
 	background-color: #DEF1F9;
