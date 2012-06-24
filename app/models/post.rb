@@ -28,7 +28,7 @@ class Post
   
   # counter :hits, :default => 0
   
-  attr_accessible :title, :body, :tag_list,:category_id
+  attr_accessible :title, :body, :tag_list,:category_id,:created_at
   attr_accessor :tag_list
   
   validates_presence_of :title, :body, :tag_list,:category_id

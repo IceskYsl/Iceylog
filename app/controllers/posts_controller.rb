@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     if !params[:tag].blank?
       scoped_posts = scoped_posts.by_tag(params[:tag])
     end
-    @posts = scoped_posts.recent.paginate :page => params[:page], :per_page => 20
+    @posts = scoped_posts.recent.paginate :page => params[:page], :per_page => 10
   end
   
   def show

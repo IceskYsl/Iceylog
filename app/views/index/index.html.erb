@@ -7,9 +7,9 @@
 				<h2><%=link_to post.title,post_path(post)%>  </h2>
 				<p class="p-cat">In: <%= link_to(post.category.name, category_posts_path(post.category), :title => post.category.name )%>  Tags:<%=post.tags%> </p>
 				<small class="p-time">
-					<strong class="day">24</strong>
-					<strong class="month">Jun</strong>
-					<strong class="year">2012</strong>
+					<strong class="day"><%=post.created_at.day%></strong>
+					<strong class="month"><%=post.created_at.strftime("%b")%></strong>
+					<strong class="year"><%=post.created_at.year%></strong>
 				</small>
 			</div>
 			<div class="p-con">		

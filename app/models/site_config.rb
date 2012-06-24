@@ -18,7 +18,7 @@ class SiteConfig
   def self.method_missing(method, *args)
     method_name = method.to_s
     super(method, *args)
-  rescue NoMethodError
+    rescue NoMethodError
     if method_name =~ /=$/
       var_name = method_name.gsub('=', '')
       value = args.first.to_s
