@@ -31,7 +31,7 @@ class Post
   attr_accessible :title, :body, :tag_list,:category_id,:created_at
   attr_accessor :tag_list
   
-  validates_presence_of :title, :body, :tag_list,:category_id
+  validates_presence_of :title,:category_id
 
   # scopes
   scope :normal, where(:state => STATE[:normal])

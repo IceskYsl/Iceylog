@@ -28,7 +28,12 @@ class ImWpXml
         puts "#{i}: #{title} : #{date_string} : #{category_string} : #{tags}"
         c = Category.where(:name => category_string).first
         c = Category.create(:name => category_string) unless c
-        Post.create(:category_id => c.id, :title => title, :body => content ,:tag_list => tags,:created_at =>date )
+        
+        begin
+          Post.create(:category_id => c.id, :title => title, :body => content ,:tag_list => tags || "notag",:created_at =>date, :state => 1 )
+        rescue => e
+          Rails.logger.error(" #{e}")
+        end
      end
   end
 
