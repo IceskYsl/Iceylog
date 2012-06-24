@@ -22,19 +22,19 @@
 					</div>
 				</div>
 			</div>
-	<div class="container">
-		<div class="span12">
-			<%= yield %>
-			<%= render "shared/aside" %>
-		</div> 
-</div> <!-- /container -->
- 
-	<div class="footer">
-		<%= raw SiteConfig.footer_html %>
-	</div>
- 
-	</div>
-</div>
+			
+			<div class="container">
+				<div class="span12">
+					<%= yield %>
+					<%= render "shared/aside" %>
+				</div> 
+				<div class="footer">
+					<%= raw SiteConfig.footer_html %>
+				</div>
+			</div> <!-- /container -->
+
+	</div> <!-- /bg-all -->
+</div><!-- /bg -->
 
 <%= render :partial => "shared/google_analytics"%>
 </body>
