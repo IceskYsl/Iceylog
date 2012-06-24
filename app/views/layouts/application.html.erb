@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= raw SiteConfig.site_title_html %> - Powered by Icelog(v0.1.0)</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="bg">
+	<div id="bg-all">
+		<div class="menu">
+		 <%= raw SiteConfig.menu_html %>
+		</div>
+			<div class="container">
+				<div class="page-header">
+					<div class="logo">
+					 <div class="txt">
+					 	<h1><a href="/"><%= raw SiteConfig.site_title %></a></h1>
+					 	<p class="desc"><%= raw SiteConfig.site_slogan %></p>
+					 </div>
+					</div>
+				</div>
+			</div>
+	<div class="container">
+		<div class="span12">
+			<%= yield %>
+			<%= render "shared/aside" %>
+		</div> 
+	
+	<div class="footer">
+		<%= raw SiteConfig.footer_html %>
+	</div> 
+</div> <!-- /container -->
+	</div>
+</div>
+
+<%= render :partial => "shared/google_analytics"%>
+</body>
+</html>

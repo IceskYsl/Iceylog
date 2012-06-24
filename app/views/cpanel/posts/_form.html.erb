@@ -1,0 +1,43 @@
+<%= form_for([:cpanel,@post]) do |f| %>
+<fieldset>
+  <legend></legend>
+  <%= render 'shared/error_messages', :target => @post %>
+
+  <div class="clearfix">
+    <%= f.label :title %>
+    <div class="input">
+    <%= f.text_field :title, :class => "span10" %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :category_id %>
+    <div class="input">
+    <%= f.select :category_id, Category.all.collect { |s| [s.name,s.id] } %></div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :body %>
+    <div class="input">
+    <%= f.text_area :body, :class => "span13", :style => "height:400px" %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :tag_list %>
+    <div class="input">
+    <%= f.text_field :tag_list, :class => "xxlarge" %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :state %>
+    <div class="input">
+    <%= f.select :state, Post.state_collection %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "发布", :class => "btn primary", :disable_with => "发布中" %>
+    or
+    <%= link_to 'Back', cpanel_posts_path %>
+  </div>
+<% end %>

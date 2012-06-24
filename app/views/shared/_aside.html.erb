@@ -1,0 +1,54 @@
+<div class="SR">
+<!-- Start Search -->
+<div class="search" >
+<div id="cse-search-form" style="width: 100%;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+ google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.V2_DEFAULT});
+ google.setOnLoadCallback(function() {
+   var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+     '017791625708791975426:3yjmowvffhu', customSearchOptions);
+   customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+   var options = new google.search.DrawOptions();
+   options.enableSearchboxOnly("/search");
+   customSearchControl.draw('cse-search-form', options);
+ }, true);
+</script>
+</div>
+<!-- End Search -->
+
+
+<!-- Start About This Blog -->
+<div class="about">
+	 <%= raw SiteConfig.about_me_html %>
+</div>
+<!-- End About This Blog -->
+
+<div id="recent-posts" class="widget widget_recent_entries">		
+<h3>近期文章</h3>
+<ul>
+	<%@aside_posts.each do |post|%>
+	<li> <%=link_to post.title,post_path(post)%> </li>
+	<%end%>
+</ul>
+</div>
+
+<div id="categories" class="widget widget_categories">
+<h3>分类目录</h3>
+<ul>
+	<%@aside_categories.each do |category|%>
+		<li> <%= link_to(category.name, category_posts_path(category), :title => category.name )%></li>
+	<%end%>
+</ul>
+</div>
+
+<div id="recent-posts" class="widget widget_recent_entries">		
+<h3>友情链接</h3>
+<ul>
+	<%@aside_sites.each do |site|%>
+		<li> <%=link_to site.name, site.url%>	</li>
+	<%end%>
+</ul>
+</div>
+
+</div>	 <!--SR-->

@@ -1,0 +1,31 @@
+<%= form_for([:cpanel,@category]) do |f| %>
+<fieldset>
+  <legend></legend>
+  <%= render 'shared/error_messages', :target => @category %>
+
+  <div class="clearfix">
+    <%= f.label :name %>
+    <div class="input">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :summary %>
+    <div class="input">
+      <%= f.text_field :summary %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :sort %>
+    <div class="input">
+      <%= f.text_field :sort %>
+    </div>
+  </div>
+  <div class="actions">
+    <%= f.submit t("common.save"), :class => "btn primary", :disable_with => t("common.saving") %>
+    <%= link_to 'Back', cpanel_categories_path %>
+  </div>
+  </fieldset>
+<% end %>

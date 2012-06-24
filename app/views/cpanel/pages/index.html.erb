@@ -1,0 +1,31 @@
+<% content_for :sitemap do %>
+  <span class="current">Wiki</span>
+<% end %>
+<h1>Wiki 列表</h1>
+
+<table class="grid">
+  <tr class="head">
+    <td class="first">ID</td>
+    <td style="width:200px">Slug</td>
+    <td>Title</td>
+    <td>at</td>
+    <td style="width:80px;"></td>
+  </tr>
+
+<% @pages.each do |page| %>
+  <tr class="<%= 'deleted' if !page.deleted_at.blank? %>">
+    <td class="first"><%= page.id %></td>
+    <td><%= page.slug %></td>
+    <td><%= truncate(page.title,:length => 30) %></td>
+    <td><%= page.created_at %></td>
+    <td>
+    <%= link_to '编辑', edit_cpanel_page_path(page), :class => "icon small_edit" %>
+    <%= link_to '删除', cpanel_page_path(page), :confirm => 'Are you sure?', :method => :delete, :class => "icon small_delete" %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @pages %>
+
+
+<br />
+<%= link_to 'New Page', new_cpanel_page_path %>

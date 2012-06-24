@@ -1,0 +1,2 @@
+module Cpanel::SiteConfigsHelper
+end

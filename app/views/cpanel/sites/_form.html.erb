@@ -1,0 +1,43 @@
+
+
+<%= form_for([:cpanel,@site]) do |f| %>
+<fieldset>
+  <legend></legend>
+  <%= render 'shared/error_messages', :target => @site %>
+
+  <div class="clearfix">
+    <%= f.label :name %>
+    <div class="input">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :url %>
+    <div class="input">
+      <%= f.text_field :url %>
+    </div>
+
+  </div>
+  <div class="clearfix">
+    <%= f.label :favicon %>
+    <div class="input">
+      <%= f.text_field :favicon %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :desc %>
+    <div class="input">
+    <%= f.text_area :desc, :class => "span13", :style => "height:100px" %>
+    </div>
+  </div>
+ 
+
+
+  <div class="actions">
+    <%= f.submit t("common.save"), :class => "btn primary", :disable_with => t("common.saving") %>
+    <%= link_to 'Back', cpanel_sites_path %>
+  </div>
+  </fieldset>
+<% end %>

@@ -1,0 +1,217 @@
+/* Begin Typography & Colors */
+* { margin: 0; padding: 0; }
+html { margin-top: 18px !important; }
+* html body { margin-top: 18px !important; }
+
+body { background: #c6e5f2 url(/images/body-bkg.png) no-repeat center top; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; padding: 0px; margin-top: 0px; color:#35383d;}
+input, button, textarea, select {  font: normal 12px/12px "Verdana", sans-serif; color:#2d3538; vertical-align: middle; }
+legend { display: none; }
+fieldset { border: none; }
+ul, ol { list-style: none; }
+ol { list-style-type: decimal;}
+table { border-collapse: collapse; width: 100%; }
+hr { display: none; }
+img { padding: 0px; margin: 0px; border: none; text-align: center;}
+
+a:link { text-decoration: none; color : #0099cc; border: 0px; -moz-outline-style: none;}
+a:active { text-decoration: underline; color : #0099cc; border: 0px; -moz-outline-style: none;}
+a:visited { text-decoration: none; color : #0099cc; border: 0px; -moz-outline-style: none;}
+a:hover	{ text-decoration: underline; color : #025d87; border: 0px; -moz-outline-style: none;} 
+a:focus { outline: none;-moz-outline-style: none;}
+
+h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
+
+
+
+/* BG 
+############################################################################################################## */
+#bg { width: 980px; margin: 0 auto; margin-top: 30px;}
+#bg-all { width: 980px; background: #fff; overflow: hidden;}
+/**/ * html #bg-all { height: 1%;} /* */
+
+
+/* Container 
+############################################################################################################## */
+
+
+ 
+
+/* Logo
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*.logo { overflow: hidden; border-bottom: solid 0px #e6f1f3; margin-bottom: 0px;}*/
+.logo { overflow: hidden; border-bottom: solid 4px #e6f1f3; margin-bottom: 20px;}
+
+/**/ * html .logo { height: 1%;} /* */ 
+
+.logo .txt { width: 520px; padding-left: 70px; background: url(images/logo-symbol.png) no-repeat left 10px; padding-bottom: 10px; }
+.logo .txt h1 { font: bold 30px/25px "Arial"; letter-spacing: -1px; text-transform: lowercase; padding-bottom: 10px;}
+.logo .txt h1 a, .logo .txt h1 a:visited, .logo .txt h1 a:hover { text-decoration: none; color:#272d36;}
+.logo .txt p.desc { font: 14px/14px "Arial"; letter-spacing: 0px; display: block; color:#2abada;}
+
+.logo .img { padding-bottom: 15px; }
+
+
+.navbar {
+  margin-bottom: 0;
+}
+.footer  {
+  margin-top: 20px;
+}
+.footer  p {
+  text-align: center; /* center align it with the container */
+}
+
+/* The white background content wrapper */
+.content  {
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+          box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+ 
+
+/* Page header tweaks */
+.page-header {
+  background-color: #fff;
+  padding: 20px 20px 0px;
+  margin: 0px -20px ;
+}
+
+.topbar .btn {
+  border: 0;
+}
+
+
+/* tag_box ======================================================== */
+
+.tag_box {
+	list-style:none;
+	margin:0;
+	padding:5px 0 ;
+	overflow:hidden;
+}
+.tag_box li {
+	line-height:28px;
+}
+.tag_box.inline li {
+	float:left;
+}
+.tag_box a {
+	padding: 3px 6px;
+	margin: 2px;
+	background: #eee;
+	color:#005F6B;
+	border-radius: 3px;
+	text-decoration:none;
+}
+.tag_box a span{
+	vertical-align:super;
+	font-size:0.8em;
+}
+.tag_box a.active {
+	background:#57A957;
+	border:1px solid #4C964D;
+	color:#FFF;
+}
+	
+	
+	
+	
+.SL { width: 520px; float: left; padding-left: 60px;}
+
+.menu { overflow: hidden; float: left; width: 100%; background:#def1f9; width: 980px; margin: 0 auto; padding: 10px 0px 0px 100px;}
+/**/ * html .menu { height: 1%;} /* */ 
+.menu ul { float:left; }
+.menu li { display: inline; font: bold 14px/14px "Arial"; letter-spacing: -1px; float: left; height: 28px; }
+.menu li ul li { font-weight: normal; letter-spacing: normal;}
+.menu li a, .menu li a:visited { color:#272d36; float: left; padding: 8px 6px 8px 6px; margin-right: 5px;}
+.menu li a:hover { background: #fff; color:#0099cc; text-decoration: none;}
+.menu .current_page_item a, .menu .current_page_item a:visited, .menu .current_page_item a:hover { background: #272d36 url(images/menu-on-bkg.png) repeat-x bottom; color:#fff; }
+
+.menu .current_page_item .page_item a, .menu .current_page_item .page_item a:visited { background: #def1f9; color:#272d36;}
+.menu .current_page_item .page_item a:hover { background: #fff; color:#0099cc; }
+
+
+/* Side Right 
+############################################################################################################## */
+.SR { width: 300px; margin-right: 30px; padding-bottom: 30px; float: right;}
+
+/* Search 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.SR .search { background: #3d96d5 url(images/search-bkg.png) no-repeat left bottom; right: 0px; padding: 15px; overflow: hidden;}
+/**/ *html .SR .search  { height: 1%;} /**/ 
+.SR .search form { width: 245px; padding: 10px; border: 1px solid #3ac6e5; background: #2abada; }
+.SR .search fieldset { overflow: hidden; height: 1%;  }
+/*.SR .search input { float: left; margin-right: 2px; background: url(images/search-input.png) no-repeat; border: none; padding: 5px 3px 5px 65px; width: 145px; color:#666;}
+.SR .search button { float: left; background: url(images/search-button.png) no-repeat; width: 26px; height: 24px; border: none; cursor: pointer; text-indent: -1000em; }
+*/
+.SR .syn ul { margin: 10px 0px;}
+.SR .syn li { background: url(images/SynIco.png) no-repeat left center; margin: 0px 5px 0px 0px; padding: 3px 0px 3px 15px; list-style-type: none; color:#ffcc66; display: inline; font: bold 14px/14px 'Arial'; letter-spacing: -1px;}
+.SR .syn li a {color:#fff; }
+.SR .syn li a:visited {color:#fff; }
+.SR .syn li a:hover {color:#fff; }
+
+
+/* About Blog 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.SR .about { background: #57abe6 url(images/about-bkg.png) no-repeat left top; padding: 20px 15px 15px 15px; color:#fff;}
+.SR .about h3 { font-size: 24px; letter-spacing: -1px; color:#fff;}
+.SR .about p { padding: 5px 0px; margin: 0px; font-size: 12px; line-height: 19px;}
+
+
+/* widget
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.SR .widget { background: #e1f3ee; padding: 15px; margin-bottom: 3px; color:#5e8a89;}
+.SR .widget ul {  padding-left: 0px; margin-left:0px}
+
+.SR .widget h3 {font: bold 15px/15px 'Arial'; letter-spacing: -1px; color:#102a30; padding-bottom: 5px; border-bottom: solid 1px #c5ded7; margin-bottom: 5px;}
+.SR .widget li { background: url(images/tabs-arrow.png) no-repeat left 6px; padding: 2px 0px 2px 6px; font-size: 11px; color:#5e8a89;}
+.SR .widget a, .SR .widget a:visited { color:#247682; text-decoration: underline;}
+.SR .widget a:hover { color:#003333; text-decoration: underline;}
+	
+	
+	
+/* Post Single
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.post, .attachment { width: 100%; position: relative;}
+/**/ * html .post, .attachment { width: 99%;} /**/ 
+
+
+.p-head { padding-bottom: 2px;}
+.p-head h1, .p-head h1, .p-head h1 a, .p-head h1 a:visited { color:#272d36; font: normal 19px/24px "Helvetica"; letter-spacing: -1px; }
+.p-head h1 a:hover { color:#0099cc; text-decoration: none; }
+
+.p-head h2 { color:#272d36; font: normal 24px/24px "Helvetica"; letter-spacing: -1px; }
+.p-head h2 a, .p-head h2 a:visited { color:#272d36; }
+.p-head h2 a:hover { color:#0099cc; text-decoration: none; }
+
+.p-head h3 { color:#272d36; font: normal 20px/20px "Arial"; letter-spacing: -1px; }
+.p-head h3 a, .p-head h3 a:visited { color:#272d36;}
+.p-head h3 a:hover { color:#0099cc; text-decoration: none;}
+
+.p-cat { font: normal 11px/14px 'Arial'; text-transform: uppercase; color:#999;}
+.p-cat a, .p-cat a:visited, .p-cat a:hover { text-decoration: underline; color:#999; padding-right: 5px;}
+
+.p-time { background: url(images/p-time-bkg.png) no-repeat right bottom; position: absolute; left: -70px; top: 5px; width: 50px; padding-bottom: 10px; }
+/**/ * html .p-time { left: -70px;} /**/ 
+.p-time strong { float: left; text-align: center;}
+.p-time .day { font: normal 20px/18px "Arial"; letter-spacing: -1px; color:#fff; width: 40px; padding: 7px 0px; background:#2abada; overflow: hidden; }
+.p-time .month { background:#dedede; width: 40px; padding: 3px 0px; margin-bottom: 10px;}
+.p-time .year { background: #fff; border: solid 1px #dedede; font: normal 11px/11px 'Verdana'; padding: 12px 5px; color:#bababa;}
+
+.p-con { border-top: solid 1px #dbdbdb;}
+.p-con p { font: normal 12px/19px "Verdana"; padding: 5px 0px; margin: 5px 0px; line-height: 22px;}
+.p-con ol { list-style: decimal inside; }
+.p-con ol { padding: 10px 0px 10px 25px; margin: 0px; }
+.p-con ol li { padding: 2px 0px 2px 0px; }
+.p-con ul { padding: 10px 0px 10px 20px; margin: 0px; }
+.p-con ul li { padding: 2px 0px 2px 13px; list-style-type: none; background: url("images/p-con-li.png") no-repeat left 1px; color:#666; }
+.p-con blockquote { font: italic 14px/19px Georgia, "Times New Roman", Times, serif; padding: 10px 20px; margin: 10px 0px; background: #ecf6f8; }
+.p-con blockquote p { font: italic 14px/19px Georgia, "Times New Roman", Times, serif; }
+.p-con blockquote li { padding: 2px 0px 2px 13px; list-style-type: none; font-size: 12px; line-height: 17px;}

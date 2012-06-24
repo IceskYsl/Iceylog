@@ -1,0 +1,24 @@
+<div class="SL">
+		
+		<!--Start Post-->
+		<%@posts.each  do |post|%>
+		<div class="post" style="margin-bottom: 40px;">
+			<div class="p-head">
+				<h2><%=link_to post.title,post_path(post)%>  </h2>
+				<p class="p-cat">In: <%=post.category.name%>  Tag:<%=post.tags%> </p>
+				<small class="p-time">
+					<strong class="day">24</strong>
+					<strong class="month">Jun</strong>
+					<strong class="year">2012</strong>
+				</small>
+			</div>
+			<div class="p-con">		
+				<%=raw post.body_html%>				
+      </div>
+	 </div>
+	 <%end%>
+		<!--End Post-->
+		<!-- Pagination links -->
+		<%= will_paginate @posts %>
+
+	</div> <!--SL-->

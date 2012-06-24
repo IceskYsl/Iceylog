@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Icelog - Control Panel</title>
+  <%= stylesheet_link_tag "cpanel" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div class="topbar" data-dropdown="dropdown">
+    <div class="topbar-inner">
+      <div class="container">
+        <%= link_to("控制台", cpanel_root_path, :class => "brand")%>
+				<%= render_list :class => "nav" do |li|
+				  li << link_to(t("cpanel.menu.root_path"), cpanel_root_path)
+				  li << link_to(t("cpanel.menu.sections"), cpanel_categories_path )
+				  li << link_to(t("cpanel.menu.posts"),cpanel_posts_path )
+					li << link_to(t("cpanel.menu.pages"),cpanel_pages_path )
+					li << link_to(t("cpanel.menu.sites"),cpanel_sites_path )
+				  li << link_to(t("cpanel.menu.site_configs"), cpanel_site_configs_path )
+				end  %>
+
+        <ul class="nav secondary-nav" id="userbar">
+          <li>
+            <a href="#" class="dropdown-toggle"><%= "root" %></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to("回到前台", root_path)%></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="<%= cpanel_root_path %>">Root</a> &gt; 
+      <%= yield :sitemap %>
+    </div>
+    <div id="main" class="box">
+      <%= notice_message %>
+      <%= yield %>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="suggest">使用 <a href="http://www.mozillaonline.com/" target="_blank" rel="nofollow">Firefox</a> 或 <a href="http://www.google.com/chrome" target="_blank" rel="nofollow">Chrome</a> 浏览访问本站将会获得更佳的视觉体验.</p>
+    </div>
+  </footer>
+</body>
+</html>
