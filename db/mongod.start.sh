@@ -1,0 +1,1 @@
+rm -f /datas/dbs/monogdb/*.lock; mongod --dbpath /datas/dbs/monogdb/ --fork -logpath /var/log/mongodb.log --profile 1 --logappend --journal --pidfilepath  /var/log/mongodb.pid --maxConns 10000 --rest --oplogSize 2048
