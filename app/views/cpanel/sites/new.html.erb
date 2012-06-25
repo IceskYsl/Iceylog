@@ -1,7 +1,9 @@
 
 
 <% content_for :sitemap do %>
-  <a href="<%= cpanel_sites_path %>">><%= t("cpanel.sites") %></a> &gt; <span class="current"><%= t("common.create") %></span>
+  <a href="<%= cpanel_sites_path %>"><%= t("cpanel.menu.sites") %></a> &gt; <span class="current"><%= t("common.create") %></span>
 <% end %>
+
+ 
 
 <%= render 'form' %>

@@ -2,6 +2,7 @@
   cpanel:
     menu:
       root_path: "概况"
+      categories: "分类"
       site_configs: "设置"
       users: "用户"
       sections: "分类"

@@ -1,5 +1,5 @@
 <% content_for :sitemap do %>
-  <span class="current"><%= t("cpanel.categories") %></span>
+  <span class="current"><%= t("cpanel.menu.categories") %></span>
 <% end %>
 <h1>Listing categories</h1>
 
@@ -17,8 +17,8 @@
     <td class="first"><%= categorie.id %></td>
     <td><%= categorie.name %></td>
     <td><%= categorie.sort %></td>
-    <td><%= link_to '', edit_cpanel_category_path(categorie) , :class => "icon small_edit" %>
-    <%= link_to '', cpanel_categories_path(categorie), :confirm => 'Are you sure?', :method => :delete, :class => "icon small_delete" %></td>
+    <td><%= link_to '编辑', edit_cpanel_category_path(categorie) , :class => "icon small_edit" %>
+    <%= link_to '删除', cpanel_category_path(categorie), :confirm => 'Are you sure?', :method => :delete, :class => "icon small_delete" %></td>
   </tr>
 <% end %>
 </table>
@@ -26,3 +26,4 @@
 <br />
 
 <%= link_to 'New categorie', new_cpanel_category_path %>
+

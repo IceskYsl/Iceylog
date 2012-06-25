@@ -21,18 +21,18 @@
 
         <ul class="nav secondary-nav" id="userbar">
           <li>
-            <a href="#" class="dropdown-toggle"><%= "root" %></a>
+            <a href="#" class="dropdown-toggle"><%= SiteConfig.site_author %></a>
             <ul class="dropdown-menu">
               <li><%= link_to("回到前台", root_path)%></li>
             </ul>
           </li>
         </ul>
       </div>
-    </div>
+    </div> 
   </div>
   <div class="container">
     <div class="breadcrumb">
-      <a href="<%= cpanel_root_path %>">Root</a> &gt; 
+      <a href="<%= cpanel_root_path %>">控制台</a> &gt; 
       <%= yield :sitemap %>
     </div>
     <div id="main" class="box">

@@ -37,7 +37,7 @@
 <h3>分类目录</h3>
 <ul>
 	<%@aside_categories.each do |category|%>
-		<li> <%= link_to(category.name, category_posts_path(category), :title => category.name )%></li>
+		<li> <%= link_to("#{category.name}(#{category.posts_count})" , category_posts_path(category), :title => category.name )%></li>
 	<%end%>
 </ul>
 </div>

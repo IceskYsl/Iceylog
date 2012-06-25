@@ -1,3 +1,7 @@
+<% content_for :sitemap do %>
+  <a href="<%= cpanel_site_configs_path %>"><%= t("cpanel.menu.site_configs") %></a> &gt; <span class="current"><%= t("common.edit") %></span>
+<% end %>
+
 <h1><%= t("cpanel.site_configs.edit_setting")%></h1>
 
 <%= render 'form' %>
