@@ -2,6 +2,7 @@ defaults: &defaults
   app_name: "Iceylog"
   foot_html: "&copy; Iceylog."
   domain: "127.0.0.1:3000"    
+  disqus_shortname: "iceskysl"
   google_analytics_key: ""
   email_sender: 'no-reply@iceskysl.com'
   twitter_id: "iceskysl"

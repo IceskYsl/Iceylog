@@ -1,13 +1,12 @@
 ## Iceylog
-Iceylog is a blog system~
-
+Welcome to Iceylog home.
+Iceylog is a semantic personal publishing platform with a focus on aesthetics, web standards, and usability.
 
 
 ## Install
 
-
 ### Ruby 1.9.3
-=
+
 + rvm list
 + rvm use ruby-1.9.3-rc1
 + bundle  install
