@@ -157,6 +157,7 @@ GEM
       kgio (~> 2.4)
       rack
       raindrops (~> 0.6)
+    watu_table_builder (0.3.0)
     will_paginate (3.0.2)
     will_paginate_mongoid (1.0.5)
       mongoid (~> 2.4)
@@ -187,5 +188,6 @@ DEPENDENCIES
   therubyracer
   uglifier (>= 1.0.3)
   unicorn
+  watu_table_builder
   will_paginate (= 3.0.2)
   will_paginate_mongoid (~> 1.0.2)

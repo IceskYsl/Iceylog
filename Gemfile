@@ -51,6 +51,9 @@ end
 
 gem 'jquery-rails'
 
+#table_builder
+gem "watu_table_builder", :require => "table_builder"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
