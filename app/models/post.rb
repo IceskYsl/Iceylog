@@ -36,6 +36,7 @@ class Post
   # scopes
   scope :normal, where(:state => STATE[:normal])
   scope :by_tag, Proc.new { |t| where(:tags => t) }
+  
   scope :last_actived, desc("updated_at").desc("created_at")
   scope :fields_for_list, without(:body,:body_html)
   

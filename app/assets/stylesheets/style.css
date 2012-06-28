@@ -198,7 +198,7 @@ h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
 .p-head h3 a, .p-head h3 a:visited { color:#272d36;}
 .p-head h3 a:hover { color:#0099cc; text-decoration: none;}
 
-.p-cat { font: normal 11px/14px 'Arial'; text-transform: uppercase; color:#999;}
+.p-cat { font: normal 11px/14px 'Arial';  color:#999;}
 .p-cat a, .p-cat a:visited, .p-cat a:hover { text-decoration: underline; color:#999; padding-right: 5px;}
 
 .p-time { background: url(images/p-time-bkg.png) no-repeat right bottom; position: absolute; left: -70px; top: 5px; width: 50px; padding-bottom: 10px; }

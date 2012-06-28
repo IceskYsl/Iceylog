@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
   
   def tag    
-    scoped_posts = Post.by_tag(params[:tag])
+    scoped_posts = Post.normal.by_tag(params[:tag])
     @posts = scoped_posts.recent.paginate :page => params[:page], :per_page => 10
     render :action => "index" #, :stream => true
   end
