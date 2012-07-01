@@ -12,5 +12,6 @@ module ApplicationHelper
 
     flash_messages.join("\n").html_safe
   end
+
   
 end

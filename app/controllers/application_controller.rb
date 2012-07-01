@@ -24,6 +24,22 @@ class ApplicationController < ActionController::Base
     @aside_sites = Site.limit(15)
     @aside_categories = Category.limit(15)
     @aside_posts = Post.last_actived.limit(15)
+    init_aside_by_month
+  end
+  
+ 
+  def init_aside_by_month
+    posts = Post.normal.all
+    @month = {}
+    posts.each do |post|
+  	  date = post.created_at.strftime('%Y%m')
+  	  if @month[date]
+        @month.store("#{date}",@month["#{date}"] + 1)
+      else
+        @month.store("#{date}",1)
+      end   
+   end
+   @array_mon = @month.sort.reverse! 
   end
   
 end

@@ -7,6 +7,7 @@ Iceylog::Application.routes.draw do
   resources :posts
   match "posts/category/:id" => "posts#category", :as => :category_posts
   match "posts/tag/:tag" => "posts#tag", :as => :tag_posts
+  match "posts/month/:month" => "posts#month", :as => :month_posts
   
   resources :pages, :path => "page" do
     collection do

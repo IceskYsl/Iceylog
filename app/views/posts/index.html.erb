@@ -5,7 +5,7 @@
 		<div class="post" style="margin-bottom: 40px;">
 			<div class="p-head">
 				<h2><%=link_to post.title,post_path(post)%>  </h2>
-				<p class="p-cat">In: <%=post.category.name%>  Tag:<%=post_tags_tag(post)%> </p>
+				<p class="p-cat">By: <%= raw SiteConfig.site_author %> In: <%=post.category.name%>  Tag:<%=post_tags_tag(post)%> </p>
 				<small class="p-time">
 					<strong class="day"><%=post.created_at.day%></strong>
 					<strong class="month"><%=post.created_at.strftime("%b")%></strong>

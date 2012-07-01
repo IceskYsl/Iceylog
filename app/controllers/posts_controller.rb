@@ -26,6 +26,14 @@ class PostsController < ApplicationController
     render :action => "index" #, :stream => true
   end
   
+  def month
+    month = params[:month] || Time.now.strftime('%Y%m') 
+    start = Date.strptime("#{month}",'%Y%m').beginning_of_month
+    finish= Date.strptime("#{month}",'%Y%m').end_of_month
+    logger.info"======#{start}====#{finish}"
+    @posts = Post.normal.by_month(start,finish).paginate :page => params[:page], :per_page => 10
+    render :action => "index"
+  end
   
   
 end

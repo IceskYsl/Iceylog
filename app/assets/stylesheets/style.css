@@ -190,7 +190,7 @@ h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
 .p-head h1, .p-head h1, .p-head h1 a, .p-head h1 a:visited { color:#272d36; font: normal 19px/24px "Helvetica"; letter-spacing: -1px; }
 .p-head h1 a:hover { color:#0099cc; text-decoration: none; }
 
-.p-head h2 { color:#272d36; font: normal 24px/24px "Helvetica"; letter-spacing: -1px; }
+.p-head h2 { color:#272d36; font: normal 22px/22px "Helvetica"; letter-spacing: 0px; }
 .p-head h2 a, .p-head h2 a:visited { color:#272d36; }
 .p-head h2 a:hover { color:#0099cc; text-decoration: none; }
 

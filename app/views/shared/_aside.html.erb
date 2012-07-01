@@ -52,6 +52,18 @@
 </ul>
 </div>
 
+<div id="categories" class="widget widget_categories">
+	<h3>按日期归档</h3>
+ 
+	<ul>
+		<% @array_mon.each do |i,v| %>
+			<li> <%=link_to "#{i}(#{v})" , month_posts_path(i)%>	</li>
+		<%end%>
+	</ul>
+</div>
+
+
+
 
 <div id="recent-posts" class="widget widget_recent_entries">		
 <h3>友情链接</h3>
@@ -61,5 +73,18 @@
 	<%end%>
 </ul>
 </div>
+
+<div id="recent-posts" class="widget widget_recent_entries">		
+<h3>数据统计</h3>
+<ul>
+    <li>文章: <%= Post.count %> 篇</li>
+    <li>页面: <%= Page.count %> 页</li>
+   	<li>分类: <%= Category.count %> 个</li>
+		<li>友情链接: <%= Site.count %> 个</li>
+</ul>
+</div>
+
+ 
+
 
 </div>	 <!--SR-->
