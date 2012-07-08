@@ -17,6 +17,7 @@ class Post
   field :state, :type => Integer, :default => STATE[:normal]
   field :tags, :type => Array, :default => []
   field :comments_count, :type => Integer, :default => 0
+  field :read_count, :type => Integer, :default => 0
   
   belongs_to :category
   counter_cache :name => :category, :inverse_of => :posts
@@ -60,6 +61,10 @@ class Post
     self.body_html = MarkdownConverter.convert(self.body)
   rescue => e
     Rails.logger.error("markdown_for_body_html failed: #{e}")
+  end
+  
+  def hits_incr
+    self.update_attribute(:read_count,self.read_count + 1) 
   end
   
   # 给下拉框用

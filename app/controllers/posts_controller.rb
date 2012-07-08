@@ -11,6 +11,8 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find(params[:id])
+    render_404 if @post.nil?
+    @post.hits_incr
     # @post.hits.incr
   end
   

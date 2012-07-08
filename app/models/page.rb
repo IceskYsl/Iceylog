@@ -15,6 +15,7 @@ class Page
   field :body
   # Markdown 格式化后的 html
   field :body_html
+  field :read_count, :type => Integer, :default => 0
 
   
   attr_accessible :title, :body, :slug
@@ -36,6 +37,10 @@ class Page
   
   def self.find_by_slug(slug)
     where(:slug => slug).first
+  end
+  
+  def hits_incr
+    self.update_attribute(:read_count,self.read_count + 1) 
   end
   
 end
