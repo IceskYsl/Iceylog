@@ -5,6 +5,7 @@ module Redcarpet
   module Render
     class HTMLwithSyntaxHighlight < HTML
       def initialize(extensions={})
+        puts "==HTMLwithSyntaxHighlight initialize=="
         super(extensions.merge(:xhtml => true, 
                                :no_styles => true, 
                                :filter_html => true, 
@@ -12,10 +13,15 @@ module Redcarpet
       end
 
       def block_code(code, language)
+        puts "==block_code=#{language}=#{code}="
         language = 'text' if language.blank?
         begin
-          Pygments.highlight(code, :lexer => language, :formatter => 'html', :options => {:encoding => 'utf-8'})
+          puts "=====begin===="
+          c = Pygments.highlight(code, :lexer => language, :formatter => 'html', :options => {:encoding => 'utf-8'})
+          puts "c===#{c}"
+          c
         rescue
+           puts "==rescue="
           Pygments.highlight(code, :lexer => 'text', :formatter => 'html', :options => {:encoding => 'utf-8'})
         end
       end
@@ -54,15 +60,18 @@ class MarkdownConverter
   include Singleton
 
   def self.convert(text)
+    puts "==self.convert=="
     self.instance.convert(text)
   end
 
   def convert(text)
+    puts "==convert=="
     @converter.render(text)
   end
 
   private
   def initialize
+    puts "==MarkdownConverter initialize=="
     @converter = Redcarpet::Markdown.new(Redcarpet::Render::HTMLwithSyntaxHighlight.new, {
         :autolink => true,
         :fenced_code_blocks => true,
@@ -72,19 +81,16 @@ class MarkdownConverter
 end
 
 class MarkdownTopicConverter < MarkdownConverter
+  
   def self.format(text)
+    puts "==format==#{text}"
     return '' if text.blank?
-
     self.convert_bbcode_img(text)
     
     # 如果 ``` 在刚刚换行的时候 Redcapter 无法生成正确，需要两个换行
     text.gsub!("\n```","\n\n```")
     
     result = self.convert(text)
-
-    self.link_mention_floor(result)
-    self.link_mention_user(result)
-
     return result.strip
   rescue => e
     puts "MarkdownTopicConverter.format ERROR: #{e}"
@@ -101,22 +107,8 @@ class MarkdownTopicConverter < MarkdownConverter
     File.basename(src, '.*').capitalize
   end
 
-  # convert '#N楼' to link
-  def self.link_mention_floor(text)
-    text.gsub!(/#(\d+)([楼樓Ff])/) { 
-      %(<a href="#reply#{$1}" class="at_floor" data-floor="#{$1}">##{$1}#{$2}</a>)
-    }
-  end
-
-  # convert '@user' to link
-  # match any user even not exist.
-  def self.link_mention_user(text)
-    text.gsub!(/(^|[^a-zA-Z0-9_!#\$%&*@＠])@([a-zA-Z0-9_]{1,20})/io) { 
-      %(#{$1}<a href="/users/#{$2}" class="at_user" title="@#{$2}"><i>@</i>#{$2}</a>)
-    }
-  end
-
   def initialize
+     puts "==MarkdownTopicConverter initialize=="
     @converter = Redcarpet::Markdown.new(Redcarpet::Render::HTMLwithTopic.new, {
         :autolink => true,
         :fenced_code_blocks => true,

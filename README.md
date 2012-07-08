@@ -20,7 +20,7 @@ Iceylog is a semantic personal publishing platform with a focus on aesthetics, w
 + cd current
 + RAILS_ENV=production rake -T
 + RAILS_ENV=production rake db:seed
-+ bundle exec rake assets:precompile 
++ RAILS_ENV=production bundle exec rake assets:precompile 
 + bundle exec unicorn  -E production -D
 =>http://host:8080/
 
