@@ -10,6 +10,7 @@
  *
  *= require bootstrap.min
  *= require style
+*= require_tree ./sprites/
  *= require_self
 */
 

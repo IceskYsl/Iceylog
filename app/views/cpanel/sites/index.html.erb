@@ -21,8 +21,8 @@
       <td><%= item.desc %></td>
       <td><%= item.created_at %></td>
       <td>
-        <%= link_to "编辑", edit_cpanel_site_path(item.id), :class => "icon small_edit" %>
-        <%= link_to "删除", cpanel_site_path(item.id), :method => :delete, :confirm => '确定要删除吗?', :class => "icon small_delete" %>
+        <%= link_to "", edit_cpanel_site_path(item.id), :class => "icon small_edit" %>
+        <%= link_to "", cpanel_site_path(item.id), :method => :delete, :confirm => '确定要删除吗?', :class => "icon small_delete" %>
       </td>
     </tr>
     <% end %>

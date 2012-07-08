@@ -20,11 +20,25 @@ Iceylog::Application.routes.draw do
   namespace :cpanel do
     root :to => "home#index"
     resources :site_configs
-    resources :posts
+    resources :posts do 
+      collection do
+        post :preview
+      end
+    end
+
     resources :pages
     resources :categories
     resources :sites
+    
+    resources :photos do
+      collection do
+        get :tiny_new
+      end
+    end
+    
   end
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

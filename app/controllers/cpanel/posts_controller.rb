@@ -21,6 +21,13 @@ class Cpanel::PostsController < Cpanel::ApplicationController
      @post.tag_list = @post.tags.join(", ")
 
    end
+   
+   def preview
+     @body = params[:body]
+     respond_to do |format|
+       format.json
+     end
+   end
 
    def create
      @post = Post.new(params[:post])

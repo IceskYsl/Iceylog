@@ -26,6 +26,7 @@ Iceylog is a semantic personal publishing platform with a focus on aesthetics, w
 
 
 
-
+###Mac OS X
+brew install ImageMagick
 
 

@@ -28,6 +28,13 @@ gem "pygments.rb", '~> 0.2.4'
 
 # YAML 配置信息
 gem "settingslogic", "~> 2.0.6"
+  
+# 上传组件
+gem 'carrierwave', '0.5.7'
+gem 'carrierwave-mongoid', '0.1.2', :require => 'carrierwave/mongoid'
+gem 'mini_magick','3.3'
+#gem 'carrierwave-upyun', '0.1.3'
+
 
 # 禁用 assets 日志
 gem 'quiet_assets', :git => 'git://github.com/AgilionApps/quiet_assets.git'

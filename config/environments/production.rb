@@ -22,7 +22,8 @@ Iceylog::Application.configure do
   
   config.assets.js_compressor  = :uglifier
   config.assets.css_compressor = :scss
-  config.assets.precompile += %w(application.css cpanel.css)
+  config.assets.precompile += %w(application.css cpanel.css app.js topics.js)
+
   
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH

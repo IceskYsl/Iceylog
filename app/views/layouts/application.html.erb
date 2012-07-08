@@ -3,7 +3,7 @@
 <head>
   <title><%= raw SiteConfig.site_title %> - Powered by Icelog(<%= APP_VERSION %>)</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -35,7 +35,7 @@
 			</div>
 	</div> <!-- /bg-all -->
 </div><!-- /bg -->
-
+<%= javascript_include_tag "app" %>
 <%= render :partial => "shared/google_analytics"%>
 </body>
 </html>
