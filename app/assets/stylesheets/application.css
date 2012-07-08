@@ -16,5 +16,6 @@
 
  body { background: #c6e5f2 url(/images/body-bkg.png) no-repeat center top; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; padding: 0px; margin-top: 0px; color:#35383d;}
 
-
-
+.pagination { margin:0; margin-top:10px; }
+.pagination a {padding: 0 8px;}
+.pagination em {padding: 0 8px;}
