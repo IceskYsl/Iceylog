@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   def init_aside
     @aside_sites = Site.limit(15)
     @aside_categories = Category.limit(15)
-    @aside_posts = Post.last_actived.limit(15)
+    @aside_posts = Post.normal.limit(15)
     init_aside_by_month
   end
   

@@ -1,0 +1,32 @@
+<% content_for :sitemap do %>
+  <a href="<%= cpanel_categories_path %>"><%= t("cpanel.menu.category") %></a> &gt; <span class="current"><%= t("common.merge") %></span>
+<% end %>
+
+<h1>分类合并</h1>
+<p class="tips">注意： 此操作会将源分类中的文章合并到目标分类中，同时删除源分类，请谨慎操作！</p>
+
+<%= form_tag  merge_cpanel_categories_path,:method => :post do %>
+<fieldset>
+  <div class="clearfix">
+		<%= label_tag(:target_category_id, "目标分类:") %>
+    <div class="input">
+      <%=select_tag :target_category_id, options_for_select(Category.all.collect { |s| [s.name,s.id] }) %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+		<%= label_tag(:source_category_id, "源分类:") %>
+    <div class="input">
+    	<%=select_tag :source_category_id, options_for_select(Category.all.collect { |s| [s.name,s.id] }) %>
+		</div>
+  </div>
+
+  <div class="actions">
+	  <%= submit_tag t("common.merge"),:class => "btn primary", :disable_with => t("common.saving")  %>
+    <%= link_to 'Back', cpanel_categories_path %>
+  </div>
+
+
+  </fieldset>
+
+<% end %>

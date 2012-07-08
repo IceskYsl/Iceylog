@@ -27,7 +27,12 @@ Iceylog::Application.routes.draw do
     end
 
     resources :pages
-    resources :categories
+    resources :categories do 
+      collection do
+        get :merge
+        post :merge
+      end
+    end
     resources :sites
     
     resources :photos do

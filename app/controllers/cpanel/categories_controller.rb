@@ -9,6 +9,15 @@ class Cpanel::CategoriesController < Cpanel::ApplicationController
      @category = Category.find(params[:id])
 
    end
+   
+   def merge
+     if request.post?
+       source_category_id = params[:source_category_id]       
+       target_category_id = params[:target_category_id]
+       Category.merge(target_category_id,source_category_id)
+       redirect_to(cpanel_categories_path, :notice => 'category was successfully merged.')
+     end
+   end
 
    def new
      @category = Category.new

@@ -5,7 +5,11 @@
       categories: "分类"
       site_configs: "设置"
       users: "用户"
-      sections: "分类"
+      category: "分类"
+      categories:
+        index: "分类列表"
+        new: "新建分类"
+        merge: "分类合并"
       posts: "文章"
       pages: "页面"
       photos: "图片"

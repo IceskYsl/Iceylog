@@ -18,4 +18,11 @@ class Category
   scope :hots, desc(:posts_count)
   scope :sorted, desc(:sort)
   
+  #merge
+  def self.merge(target_category_id,source_category_id)
+    @category = Category.find(source_category_id)
+    @posts = @category.posts.each  {|post| post.update_attribute(:category_id,target_category_id) }
+    @category.destroy
+  end
+  
 end
