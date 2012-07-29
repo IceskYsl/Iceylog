@@ -12,6 +12,9 @@
 	<div id="bg-all">
 		<div class="menu">
 		 <%= raw SiteConfig.menu_html %>
+		<div class="feed_link">
+		  <%= link_to(raw("<span class='icon icons_rss'></span> Feed"), feed_posts_url, :title => t("posts.subscribe_with_rss", :name => Setting.app_name), :class => "feed") %>
+		</div>
 		</div>
 			<div class="container">
 				<div class="page-header">

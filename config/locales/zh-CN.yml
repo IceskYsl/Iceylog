@@ -1,7 +1,4 @@
 "zh-CN":
-  rss:
-    recent_posts_title: "订阅%{name}文章"
-    recent_posts_title: "订阅%{name}文章"
   mongoid:
     models:
       user: "用户"
@@ -25,7 +22,7 @@
         verified: "信任用户"
         remember_me: 记住登陆状态
         current_password: 旧密码
-      topic:
+      post:
         title: "标题"
         user_id: "用户"
         node_id: "节点"

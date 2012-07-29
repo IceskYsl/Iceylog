@@ -128,7 +128,7 @@ h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
 	
 .SL { width: 520px; float: left; padding-left: 60px;}
 
-.menu { overflow: hidden; float: left; width: 100%; background:#def1f9; width: 980px; margin: 0 auto; padding: 10px 0px 0px 100px;}
+.menu { overflow: hidden; float: left; width: 100%; background:#def1f9; width: 940px; margin: 0 auto; padding: 10px 0px 0px 100px;}
 /**/ * html .menu { height: 1%;} /* */ 
 .menu ul { float:left; }
 .menu li { display: inline; font: bold 14px/14px "Arial"; letter-spacing: -1px; float: left; height: 28px; }
@@ -136,6 +136,7 @@ h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
 .menu li a, .menu li a:visited { color:#272d36; float: left; padding: 8px 6px 8px 6px; margin-right: 5px;}
 .menu li a:hover { background: #fff; color:#0099cc; text-decoration: none;}
 .menu .current_page_item a, .menu .current_page_item a:visited, .menu .current_page_item a:hover { background: #272d36 url(images/menu-on-bkg.png) repeat-x bottom; color:#fff; }
+.menu .feed_link{float: right; padding: 5px 80px;}
 
 .menu .current_page_item .page_item a, .menu .current_page_item .page_item a:visited { background: #def1f9; color:#272d36;}
 .menu .current_page_item .page_item a:hover { background: #fff; color:#0099cc; }
