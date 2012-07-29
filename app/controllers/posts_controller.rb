@@ -37,5 +37,11 @@ class PostsController < ApplicationController
     render :action => "index"
   end
   
+  def feed
+    @posts = Post.normal.recent.limit(20)
+    response.headers['Content-Type'] = 'application/rss+xml; charset=utf-8'
+    render :layout => false
+  end
+  
   
 end

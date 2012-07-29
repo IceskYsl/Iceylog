@@ -4,7 +4,11 @@ Iceylog::Application.routes.draw do
 
   root :to => "index#index"
   
-  resources :posts
+  resources :posts do
+    collection do
+      get :feed
+    end
+  end
   match "posts/category/:id" => "posts#category", :as => :category_posts
   match "posts/tag/:tag" => "posts#tag", :as => :tag_posts
   match "posts/month/:month" => "posts#month", :as => :month_posts

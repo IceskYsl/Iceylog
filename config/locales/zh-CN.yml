@@ -1,4 +1,7 @@
 "zh-CN":
+  rss:
+    recent_posts_title: "订阅%{name}文章"
+    recent_posts_title: "订阅%{name}文章"
   mongoid:
     models:
       user: "用户"
