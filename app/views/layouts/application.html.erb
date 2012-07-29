@@ -3,8 +3,9 @@
 <head>
   <title><%= raw SiteConfig.site_title %> - Powered by Icelog(<%= APP_VERSION %>)</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-
   <%= csrf_meta_tags %>
+  <%= auto_discovery_link_tag(:rss,feed_posts_url,:title => '订阅最新文章') %>
+  <meta charset='utf-8' />
 </head>
 <body>
 <div id="bg">
