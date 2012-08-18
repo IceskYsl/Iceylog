@@ -33,14 +33,38 @@
 </ul>
 </div>
 
-
-
+<div class="widget widget_recent_entries">	
+<h3>最新访客</h3>
+<ul class="ds-recent-visitors"></ul>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"<%=raw Setting.duoshuo_shortname%>"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div> 
 <div class="widget widget_recent_entries">	
 <h3>近期评论</h3>
-<div id="recentcomments" class="dsq-widget"> 
+<ul class="ds-recent-comments" data-num-items="10"></ul>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"<%=raw Setting.duoshuo_shortname%>"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+
+<!-- <div id="recentcomments" class="dsq-widget"> 
 	<script type="text/javascript" src="http://iceskysl.disqus.com/recent_comments_widget.js?num_items=10&hide_avatars=0&avatar_size=24&excerpt_length=200"></script>
-	</div>
-</div>
+	</div>-->
+</div> 
 
 
 <div id="categories" class="widget widget_categories">
