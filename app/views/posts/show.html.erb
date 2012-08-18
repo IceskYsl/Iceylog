@@ -12,8 +12,13 @@
 			</div>
 			<div class="p-con">		
 				<%=raw @post.body_html%>				
-     </div>
+     		</div>
 
+		 	<div class="p-con-author">	
+				作者： <%= raw SiteConfig.site_author %> <br />
+				地址： <%=link_to @post.title,post_path(@post)%>
+			</div>
+		 
 		<div id="disqus_thread"></div>
 		        <script type="text/javascript">
 		            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
