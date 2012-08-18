@@ -18,8 +18,23 @@
 				作者： <%= raw SiteConfig.site_author %> <br />
 				地址： <%=link_to @post.title,post_path(@post)%>
 			</div>
+			
+			<!-- Duoshuo Comment BEGIN -->
+				<div class="ds-thread"></div>
+				<script type="text/javascript">
+				var duoshuoQuery = {short_name:"<%=raw Setting.duoshuo_shortname%>"};
+				(function() {
+					var ds = document.createElement('script');
+					ds.type = 'text/javascript';ds.async = true;
+					ds.src = 'http://static.duoshuo.com/embed.js';
+					ds.charset = 'UTF-8';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+				})();
+				</script>
+			<!-- Duoshuo Comment END -->
+			
 		 
-		<div id="disqus_thread"></div>
+		<!-- <div id="disqus_thread"></div>
 		        <script type="text/javascript">
 		            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 		            var disqus_shortname = '<%=raw Setting.disqus_shortname%>'; // required: replace example with your forum shortname
@@ -33,7 +48,7 @@
 		        </script>
 		        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 		        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-		
-	 </div>
+		-->
+	 </div> 
 	
  </div> 
