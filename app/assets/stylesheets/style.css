@@ -219,3 +219,5 @@ h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
 .p-con blockquote { font: italic 14px/19px Georgia, "Times New Roman", Times, serif; padding: 10px 20px; margin: 10px 0px; background: #ecf6f8; }
 .p-con blockquote p { font: italic 14px/19px Georgia, "Times New Roman", Times, serif; }
 .p-con blockquote li { padding: 2px 0px 2px 13px; list-style-type: none; font-size: 12px; line-height: 17px;}
+
+.comments{margin-top: 10px;  border-top: solid 1px #c5ded7; padding:10px 0px;}

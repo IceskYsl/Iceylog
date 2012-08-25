@@ -16,23 +16,9 @@
 
 		 	<div class="p-con-author">	
 				作者： <%= raw SiteConfig.site_author %> <br />
-				地址： <%=link_to @post.title,post_path(@post)%>
+				原文地址： <%=link_to @post.title,post_path(@post)%> 
 			</div>
-			
-			<!-- Duoshuo Comment BEGIN -->
-				<div class="ds-thread"></div>
-				<script type="text/javascript">
-				var duoshuoQuery = {short_name:"<%=raw Setting.duoshuo_shortname%>"};
-				(function() {
-					var ds = document.createElement('script');
-					ds.type = 'text/javascript';ds.async = true;
-					ds.src = 'http://static.duoshuo.com/embed.js';
-					ds.charset = 'UTF-8';
-					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-				})();
-				</script>
-			<!-- Duoshuo Comment END -->
-			
+
 		 
 		<!-- <div id="disqus_thread"></div>
 		        <script type="text/javascript">
@@ -50,5 +36,21 @@
 		        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 		-->
 	 </div> 
+	
+		<div class="comments" >
+		<!-- Duoshuo Comment BEGIN -->
+			<div class="ds-thread"></div>
+			<script type="text/javascript">
+			var duoshuoQuery = {short_name:"<%=raw Setting.duoshuo_shortname%>"};
+			(function() {
+				var ds = document.createElement('script');
+				ds.type = 'text/javascript';ds.async = true;
+				ds.src = 'http://static.duoshuo.com/embed.js';
+				ds.charset = 'UTF-8';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+			})();
+			</script>
+		<!-- Duoshuo Comment END -->
+			</div>
 	
  </div> 

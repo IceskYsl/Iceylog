@@ -2,10 +2,26 @@
 <div class="SL">
 <div class="post" >
  <div class="p-head">
-		<h1> <%=@page.title %></h1>
+	<h1> <%=@page.title %></h1>
  </div>
 	<div class="p-con">
 		<%= raw @page.body %>
 	</div>
+</div>
+
+<div class="comments" >
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"<%=raw Setting.duoshuo_shortname%>"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
 </div>
 </div>

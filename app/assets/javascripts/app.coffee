@@ -32,9 +32,9 @@ window.App =
 
       
 $(document).ready ->
- 	$("abbr.timeago").timeago()
-  $(".alert").alert()
-  $('.dropdown-toggle').dropdown()
+ $("abbr.timeago").timeago()
+ $(".alert").alert()
+ $('.dropdown-toggle').dropdown()
 
  
 
