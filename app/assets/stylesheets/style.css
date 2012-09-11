@@ -199,6 +199,7 @@ h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
 .p-head h3 a, .p-head h3 a:visited { color:#272d36;}
 .p-head h3 a:hover { color:#0099cc; text-decoration: none;}
 
+
 .p-cat { font: normal 11px/14px 'Arial';  color:#999;}
 .p-cat a, .p-cat a:visited, .p-cat a:hover { text-decoration: underline; color:#999; padding-right: 5px;}
 
@@ -210,6 +211,8 @@ h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
 .p-time .year { background: #fff; border: solid 1px #dedede; font: normal 11px/11px 'Verdana'; padding: 12px 5px; color:#bababa;}
 
 .p-con { border-top: solid 1px #dbdbdb;}
+.p-con h2 {font-size:20px; line-height:26px;}
+.p-con h3 {font-size:18px; line-height:24px;}
 .p-con p { font: normal 12px/19px "Verdana"; padding: 5px 0px; margin: 5px 0px; line-height: 22px;}
 .p-con ol { list-style: decimal inside; }
 .p-con ol { padding: 10px 0px 10px 25px; margin: 0px; }
